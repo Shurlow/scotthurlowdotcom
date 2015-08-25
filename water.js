@@ -5,7 +5,7 @@ function main() {
 
 	document.querySelector('body').onclick = function(e) {
 		e.preventDefault()
-		window.location.pathname = 'Users/shurlow/code/scotthurlowdotcom/resume.html'
+		window.location.pathname = 'resume.html'
 	}
 
 	var two = new Two({
@@ -52,7 +52,6 @@ function main() {
 	//Rendering started
 
 	function resize() {
-		console.log(two.width, two.height)
 		scene.translation.set(two.width / 4, two.height / 4)
 	}
 
