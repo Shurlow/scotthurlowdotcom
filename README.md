@@ -1,2 +1,2 @@
 # scotthurlow.com
-My website and resume site
+Just my website and resume
