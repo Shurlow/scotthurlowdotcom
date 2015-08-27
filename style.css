@@ -14,9 +14,9 @@
 
 body {
 		font-family: 'AlteHassGrotesk', Fallback, sans-serif;
-		font-size: 17px;
-    /*background: #EEEEEE;*/
-    background: #BBBBBB;
+		font-size: 16px;
+    background: #E4D6AC;
+    /*background: #D8D8D8;*/
 }
 
 h1 {
@@ -51,9 +51,9 @@ p {
 }
 
 #resume {
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 4em;
+    /*margin-top: 4em;*/
     padding: 3%;
 }
 
@@ -62,7 +62,7 @@ p {
 }
 
 #name {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	position: fixed;
 	top: 50%;
 	margin-left: 20px;

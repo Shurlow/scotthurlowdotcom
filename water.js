@@ -19,16 +19,18 @@ function main() {
 	// add circle
 	var scene = two.makeGroup()
 	var circle = two.makeCircle(width/2, height/2 + 110, 180)
-	circle.fill = '#151782'
+	// circle.fill = '#151782'
+	circle.fill = '#23245A'
 	circle.stroke = 'black'
 	circle.linewidth = 0
 	scene.add(circle)
 
 	// Create points
 	// add wave polygon
-	var points = makeAnchorPoints(20)
+	var points = makeAnchorPoints(25)
 	var wave = new Two.Polygon(points, true, true)
 	wave.fill = "black"
+	wave.stroke = 0
 	scene.add(wave)
 
 	// Mouse move event
@@ -48,6 +50,12 @@ function main() {
 		for (var i = 2; i < points.length - 2; i++) {
 			points[i].y = points[i].y + points[i].velocity
 		}
+
+		//Lerp color
+		circle.fill = getColor([20, 20, 20], [35, 36, 90], points)
+		wave.fill = getColor([60, 60, 60], [0, 0, 0], points)
+		document.body.style.backgroundColor = getColor([180, 180, 180], [228, 214, 172], points)
+
 	}).play()
 	//Rendering started
 
@@ -126,6 +134,25 @@ function main() {
 		return sortedPoints.slice(0, n)
 	}
 } // End main
+
+// Returns percentage of circle visible in decimal form
+function getColor(c1, c2, points) {
+	var min = height/2
+	var measurePoint = points[points.length/2].y
+	var p = (measurePoint - min) / 260
+
+	var r = Math.round(lerp(c1[0], c2[0], p))
+	var g = Math.round(lerp(c1[1], c2[1], p))
+	var b = Math.round(lerp(c1[2], c2[2], p))
+
+	var rbgStr = 'rgb(' + r + ',' + g + ',' + b +')'
+
+	return rbgStr
+}
+
+lerp = function(a, b, u) {
+    return (1 - u) * a + u * b;
+};
 
 function clamp(num, max) {
   return Math.min(num, max);
