@@ -36,9 +36,10 @@ function main() {
 	// Mouse move event
 	addMouseEvent()
 
+	// **
+	//
 	// Apply our own bindings for two.js resize and update
 	two.bind('resize', resize)
-
 	two.bind('update', function() {
 		var attack = 0.05
 		//Calculate velocity for each point based on last frame
@@ -55,9 +56,12 @@ function main() {
 		circle.fill = getColor([20, 20, 20], [35, 36, 90], points)
 		wave.fill = getColor([60, 60, 60], [0, 0, 0], points)
 		document.body.style.backgroundColor = getColor([180, 180, 180], [228, 214, 172], points)
+		document.getElementById('name').style.color = getAlpha([102, 102, 102], points)
 
 	}).play()
 	//Rendering started
+	//
+	// **
 
 	function resize() {
 		scene.translation.set(two.width / 4, two.height / 4)
@@ -146,6 +150,22 @@ function getColor(c1, c2, points) {
 	var b = Math.round(lerp(c1[2], c2[2], p))
 
 	var rbgStr = 'rgb(' + r + ',' + g + ',' + b +')'
+
+	return rbgStr
+}
+
+function getAlpha(c, points) {
+	var min = height/2
+	var measurePoint = points[points.length/2].y
+	var p = (measurePoint - min) / 260
+
+	var a = p*1
+	console.log(a)
+	// var r = Math.round(lerp(c1[0], c2[0], p))
+	// var g = Math.round(lerp(c1[1], c2[1], p))
+	// var b = Math.round(lerp(c1[2], c2[2], p))
+
+	var rbgStr = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a +')'
 
 	return rbgStr
 }
