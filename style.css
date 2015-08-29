@@ -15,7 +15,7 @@
 body {
 		font-family: 'AlteHassGrotesk', Fallback, sans-serif;
 		font-size: 16px;
-    background: #E4D6AC;
+    /*background: #E4D6AC;*/
     /*background: #D8D8D8;*/
 }
 
@@ -24,38 +24,18 @@ h1 {
 	font-size: 1.6em;
 }
 
-h2 {
-	text-decoration: underline;
-	font-size: 1.2em;
-	margin-top: 2em;
-	margin-bottom: 0.3em;
-}
 
-ul {
-	list-style: none;
-	padding-left: 0;
-	margin-bottom: 0.3em;
-}
-
-li {
-	margin-bottom: 0.2em;
-}
-
+/*
 p {
 	font-size: 1em;
 	margin: 0;
-}
+}*/
 
-.indented {
+/*.indented {
 	padding-left: 1.5em;
-}
+}*/
 
-#resume {
-    width: 100%;
-    margin: 0 auto;
-    /*margin-top: 4em;*/
-    padding: 3%;
-}
+
 
 #wave {
 	margin: 20px;
@@ -71,6 +51,8 @@ p {
 	/*z-index: 1;*/
 }
 
+
+
 body:hover {
 	cursor: pointer;
 }
@@ -78,4 +60,9 @@ body:hover {
 h3, button {
 	position: fixed;
 	z-index: 1;
+}
+
+@page {
+	/*margin: 0 0 0 0;*/
+	/*background: blue;*/
 }

@@ -1,27 +1,22 @@
-// var pdf = new jsPDF('p', 'pt', 'letter')
-
-// console.log(pdf)
-
-// html2canvas(document.body, {
-// 		onrendered: function(canvas) {
-// 			console.log('done')
-// 		}
-// })
-
+//Download resume
 function download() {
-	var pdf = new jsPDF('p', 'pt', 'letter');
-	// console.log(pdf)
+	var button = document.getElementById('dl')
+	var link = document.createElement('a')
+	link.download = 'hurlow_resume.pdf'
+	link.href = 'https://dl.dropboxusercontent.com/u/14283457/hurlow_resume.pdf';
 
-	pdf.addHTML($('#resume')[0], function() {
-		console.log('done')
-		// pdf.save('testResume.pdf')
+	button.addEventListener('mouseup', function(e) {
+		console.log('dl')
+		link.click()
+		console.log(button)
+
+		button.style.color = 'orangered'
+		setTimeout(function() {
+			button.style.color = 'black'
+		}, 130)
+
 	})
 }
 
-
 window.onload = download
-
-// pdf.addHTML($('body'), function () {
-//    pdf.save('Test.pdf');
-// });
 

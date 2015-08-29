@@ -53,9 +53,10 @@ function main() {
 		}
 
 		//Lerp color
-		circle.fill = getColor([20, 20, 20], [35, 36, 90], points)
-		wave.fill = getColor([60, 60, 60], [0, 0, 0], points)
-		document.body.style.backgroundColor = getColor([180, 180, 180], [228, 214, 172], points)
+		circle.fill = getColor([70, 70, 70], [35, 36, 90], points)
+		wave.fill = getColor([40, 40, 40], [0, 0, 0], points)
+		// [237, 230, 216]
+		document.body.style.backgroundColor = getColor([180, 180, 180], [232, 218, 195], points)
 		document.getElementById('name').style.color = getAlpha([102, 102, 102], points)
 
 	}).play()
@@ -160,10 +161,6 @@ function getAlpha(c, points) {
 	var p = (measurePoint - min) / 260
 
 	var a = p*1
-	console.log(a)
-	// var r = Math.round(lerp(c1[0], c2[0], p))
-	// var g = Math.round(lerp(c1[1], c2[1], p))
-	// var b = Math.round(lerp(c1[2], c2[2], p))
 
 	var rbgStr = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a +')'
 
