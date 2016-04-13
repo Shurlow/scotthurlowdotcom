@@ -1,23 +1,59 @@
 @font-face {
   font-family: josefin;
-  src: url("/Users/scotthurlow/code/scotthurlowdotcom/JosefinSans-Light.ttf");
+  src: url("JosefinSans-Regular.ttf");
 }
+@font-face {
+  font-family: josefin-light;
+  src: url("JosefinSans-Light.ttf");
+}
+@font-face {
+  font-family: josefin-bold;
+  src: url("JosefinSans-Bold.ttf");
+}
+@font-face {
+  font-family: hk-regular;
+  src: url("HKGrotesk-Regular.otf");
+}
+@font-face {
+  font-family: hk-bold;
+  src: url("HKGrotesk-Bold.otf");
+}
+@font-face {
+  font-family: hk-light;
+  src: url("HKGrotesk-Light.otf");
+}
+@font-face {
+  font-family: ahamono;
+  src: url("AHAMONO-Regular.otf");
+}
+
 
 body {
   margin: 0;
+  background-color: rgb(235, 235, 235);
+  font-family: "ahamono";
+  cursor: url(arrow.png), auto;
 }
 
 h1 {
-  font-family: josefin;
+  font-size: 26px;
+  /*font-family: 'Avenir';*/
+  margin: 0;
+}
+h2 {
+  font-size: 20px;
+  /*font-family: josefin-light;*/
+  margin: 0;
 }
 
 .bg {
-  display: flex;
+  /*display: flex;*/
 }
 
 .logo {
   /*padding: 50px;*/
   position: fixed;
+  z-index: -1;
   /*top: 50px;*/
   /*left: 50px;*/
   /*width: 500px;*/
@@ -25,11 +61,23 @@ h1 {
 }
 
 .panel {
+  z-index: 1;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /*justify-content: center;*/
+}
+
+.center_text {
+  width: 50vw;
+  margin: auto;
+  margin-right: 0;
+  /*margin-top: 50vh;*/
+}
+
+.center_text:hover {
+  cursor: url("pointer.png"), auto;
 }
 
 /*.left {
