@@ -5,7 +5,8 @@ function main() {
 
 	document.querySelector('body').onclick = function(e) {
 		e.preventDefault()
-		window.location.pathname = 'resume.html'
+		// window.location.pathname = 'resume.html'
+		// window.open('ScottHurlow_Resume(online).pdf', '_self', false)
 	}
 
 	var two = new Two({
@@ -18,10 +19,11 @@ function main() {
 	// Setup scene
 	// add circle
 	var scene = two.makeGroup()
-	var circle = two.makeCircle(width/2, height/2 + 110, 180)
-	// circle.fill = '#151782'
-	circle.fill = '#23245A'
-	circle.stroke = 'black'
+	var circle = two.makeCircle(width/2, height/2 + 150, 180)
+	// circle.fill = '#AAAAAA'
+	// circle.fill = '#f9d448'
+	// circle.fill = '#23245A'
+	// circle.stroke = 'black'
 	circle.linewidth = 0
 	scene.add(circle)
 
@@ -29,7 +31,6 @@ function main() {
 	// add wave polygon
 	var points = makeAnchorPoints(25)
 	var wave = new Two.Polygon(points, true, true)
-	wave.fill = "black"
 	wave.stroke = 0
 	scene.add(wave)
 
@@ -52,12 +53,18 @@ function main() {
 			points[i].y = points[i].y + points[i].velocity
 		}
 
+		wave.fill = '#111111'
+		circle.fill = '#888888'
+		document.body.style.backgroundColor = "#444444"
+
 		//Lerp color
-		circle.fill = getColor([70, 70, 70], [35, 36, 90], points)
-		wave.fill = getColor([40, 40, 40], [0, 0, 0], points)
+		// circle.fill = getColor([70, 70, 70], [35, 36, 90], points)
+		// wave.fill = getColor([40, 40, 40], [0, 0, 0], points)
+		// wave.fill = "#AAAAAA"
+		// circle.fill = "#111111"
 		// [237, 230, 216]
-		document.body.style.backgroundColor = getColor([180, 180, 180], [232, 218, 195], points)
-		document.getElementById('name').style.color = getAlpha([102, 102, 102], points)
+		// document.body.style.backgroundColor = getColor([180, 180, 180], [232, 218, 195], points)
+		// document.getElementById('name').style.color = getAlpha([102, 102, 102], points)
 
 	}).play()
 	//Rendering started

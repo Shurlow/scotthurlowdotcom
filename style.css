@@ -1,68 +1,68 @@
-/* scotthurlow.com */
-
-* {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    margin: 0;
-}
-
 @font-face {
-	font-family: 'AlteHassGrotesk';
-	src: url('AlteHaasGroteskRegular.ttf');
+  font-family: josefin;
+  src: url("/Users/scotthurlow/code/scotthurlowdotcom/JosefinSans-Light.ttf");
 }
 
 body {
-		font-family: 'AlteHassGrotesk', Fallback, sans-serif;
-		font-size: 16px;
-    /*background: #E4D6AC;*/
-    /*background: #D8D8D8;*/
+  margin: 0;
 }
 
 h1 {
-	margin: 0;
-	font-size: 1.6em;
+  font-family: josefin;
 }
 
+.bg {
+  display: flex;
+}
 
-/*
-p {
-	font-size: 1em;
-	margin: 0;
+.logo {
+  /*padding: 50px;*/
+  position: fixed;
+  /*top: 50px;*/
+  /*left: 50px;*/
+  /*width: 500px;*/
+  /*height: 500px;*/
+}
+
+.panel {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*.left {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  min-height: 100vh;
+  border: 1px black dotted;
+  background: black;
+  color: white;
 }*/
 
-/*.indented {
-	padding-left: 1.5em;
-}*/
-
-
-
-#wave {
-	margin: 20px;
+/*.right {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  min-height: 100vh;
+}
+*/
+ul {
+  list-style-type: none;
+  padding-left:0;
+  width: 100%;
 }
 
-#name {
-	font-size: 1.2em;
-	position: fixed;
-	top: 50%;
-	margin-left: 20px;
-	transform: translateY(-72%);
-	color: #666666;
-	/*z-index: 1;*/
+ul li {
+  border: 2px solid blue;
+  height: 500px;
 }
 
-
-
-body:hover {
-	cursor: pointer;
+ul div:nth-child(2) {
+  /*background-color: #EDBC74;*/
 }
-
-h3, button {
-	position: fixed;
-	z-index: 1;
-}
-
-@page {
-	/*margin: 0 0 0 0;*/
-	/*background: blue;*/
+ul div:nth-child(3) {
+  /*background-color: #9196A1;*/
 }
