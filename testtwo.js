@@ -8,32 +8,32 @@ Two.Resoultion = 32;
 
 var delta = new Two.Vector();
 var mouse = new Two.Vector();
-var radius = 300;
+var radius = 400;
 var centerX = two.width / 2
 var centerY = two.height / 2
-var offwhite = 'rgb(235, 235, 235)'
-var fillcolor = 'rgba(200, 200, 200, 0.5)'
+var offwhite = 'rgb(240, 240, 240)'
+var offwhite2 = 'rgb(235, 235, 235)'
+// var offwhite = 'white'
+var fillcolor = 'rgba(100, 100, 100, 0.4)'
 // var fillcolor = 'white'
 console.log(centerX, centerY)
 
 //Outer cirlce & shadow
-var outerShadow = two.makeCircle(centerX, centerY, radius);
+var outerShadow = two.makeCircle(centerX, centerY, radius + 3);
 outerShadow.noStroke()
 outerShadow.fill = fillcolor
-
-console.log(outerShadow)
 
 var circle = two.makeCircle(centerX, centerY, radius);
 circle.noStroke()
 circle.fill = offwhite
 
-var innerShadow = two.makeCircle(centerX, centerY, radius - 50);
+var innerShadow = two.makeCircle(centerX, centerY, radius - 47);
 innerShadow.noStroke()
 innerShadow.fill = fillcolor
 
-var circle = two.makeCircle(centerX, centerY, radius - 50);
-circle.noStroke()
-circle.fill = offwhite
+var circle2 = two.makeCircle(centerX, centerY, radius - 50);
+circle2.noStroke()
+circle2.fill = offwhite2
 // ball.noStroke().fill = 'blue';
 // shadow.noStroke().fill = 'rgba(5, 5, 5, 0.2)';
 // shadow.offset = new Two.Vector(10, 20);
@@ -51,8 +51,8 @@ function scrollToCoords() {
   var min = 0
   var max = 2*Math.PI
   var rad = (dist - 4000)/(1-4000) * (max - min) + min
-  var x = 15 * Math.cos(rad)
-  var y = 15 * Math.sin(rad)
+  var x = 3 * Math.cos(rad)
+  var y = 3 * Math.sin(rad)
   return {
     'x': x,
     'y': y

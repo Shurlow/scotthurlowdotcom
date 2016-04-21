@@ -1,0 +1,22 @@
+{
+  "name": "scotthurlowdotcom",
+  "version": "1.0.0",
+  "description": "Just my website and resume",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shurlow/scotthurlowdotcom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shurlow/scotthurlowdotcom/issues"
+  },
+  "homepage": "https://github.com/Shurlow/scotthurlowdotcom#readme",
+  "dependencies": {
+    "gulp-compass": "^2.1.0"
+  }
+}
