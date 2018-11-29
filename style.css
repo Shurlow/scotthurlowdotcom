@@ -38,6 +38,10 @@ li {
   margin-bottom: 0.5em;
 }
 
+.extra-width {
+  width: 108%
+}
+
 .name {
   font-family: helvetica, sans-serif;
   font-size: 3.1em;
